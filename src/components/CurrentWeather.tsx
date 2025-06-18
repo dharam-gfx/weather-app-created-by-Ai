@@ -42,16 +42,16 @@ const CurrentWeather: React.FC<CurrentWeatherProps> = ({
   const iconUrl = getIconUrl(icon);
   
   // Dynamic background based on weather condition
-  const getBackgroundGradient = (iconCode: string) => {
-    if (iconCode.includes('01')) return 'linear-gradient(135deg, #FDB99B, #CF8BF3, #FDB99B)';
-    if (iconCode.includes('02') || iconCode.includes('03')) return 'linear-gradient(135deg, #A8EDEA, #FED6E3)';
-    if (iconCode.includes('04')) return 'linear-gradient(135deg, #D3CCE3, #E9E4F0)';
-    if (iconCode.includes('09') || iconCode.includes('10')) return 'linear-gradient(135deg, #89CFF0, #667eea)';
-    if (iconCode.includes('11')) return 'linear-gradient(135deg, #434343, #000000)';
-    if (iconCode.includes('13')) return 'linear-gradient(135deg, #E6DEDD, #D1D1D1)';
-    if (iconCode.includes('50')) return 'linear-gradient(135deg, #BDC3C7, #2C3E50)';
-    return 'linear-gradient(135deg, #667eea, #764ba2)';
-  };
+  // const getBackgroundGradient = (iconCode: string) => {
+  //   if (iconCode.includes('01')) return 'linear-gradient(135deg, #FDB99B, #CF8BF3, #FDB99B)';
+  //   if (iconCode.includes('02') || iconCode.includes('03')) return 'linear-gradient(135deg, #A8EDEA, #FED6E3)';
+  //   if (iconCode.includes('04')) return 'linear-gradient(135deg, #D3CCE3, #E9E4F0)';
+  //   if (iconCode.includes('09') || iconCode.includes('10')) return 'linear-gradient(135deg, #89CFF0, #667eea)';
+  //   if (iconCode.includes('11')) return 'linear-gradient(135deg, #434343, #000000)';
+  //   if (iconCode.includes('13')) return 'linear-gradient(135deg, #E6DEDD, #D1D1D1)';
+  //   if (iconCode.includes('50')) return 'linear-gradient(135deg, #BDC3C7, #2C3E50)';
+  //   return 'linear-gradient(135deg, #667eea, #764ba2)';
+  // };
 
   return (
     <div className="glass animate-fade-in" style={{
