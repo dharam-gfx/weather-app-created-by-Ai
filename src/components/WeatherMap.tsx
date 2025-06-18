@@ -98,7 +98,7 @@ const WeatherMap: React.FC<WeatherMapProps> = ({
         window.google.maps.event.clearInstanceListeners(mapInstance);
       }
     };
-  }, [isLoaded, onLocationClick]);
+  }, [isLoaded, onLocationClick, latitude, longitude]);
 
   // Update marker and info window when location changes
   useEffect(() => {
@@ -179,7 +179,7 @@ const WeatherMap: React.FC<WeatherMapProps> = ({
     map.setCenter({ lat: latitude, lng: longitude });
     map.setZoom(12);
 
-  }, [map, latitude, longitude, cityName, temperature, condition, icon, unit]);
+  }, [map, latitude, longitude, cityName, temperature, condition, icon, unit, infoWindow, marker]);
 
   if (!process.env.REACT_APP_GOOGLE_MAPS_API_KEY) {
     return (
